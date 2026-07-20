@@ -1,0 +1,6 @@
+{
+  "name": "AI Diet Plan Generator & Progress Tracker",
+  "description": "Generate personalized AI diet plans tailored to your goals, track calories, water, weight, and consult an AI nutrition assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

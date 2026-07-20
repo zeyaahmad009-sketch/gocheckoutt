@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --radius-bento: 24px;
+  --radius-card-inner: 16px;
+  
+  --shadow-bento: 0 4px 30px rgba(0, 0, 0, 0.03);
+  --shadow-bento-hover: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+@layer utilities {
+  .bento-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-slate-100);
+    border-radius: var(--radius-bento);
+    box-shadow: var(--shadow-bento);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .dark .bento-card {
+    background-color: var(--color-slate-900);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bento-card:hover {
+    box-shadow: var(--shadow-bento-hover);
+    transform: translateY(-2px);
+  }
+  
+  .bento-card-header {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 99px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
